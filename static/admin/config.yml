@@ -13,6 +13,7 @@ collections:
     slug: 'index'
     media_folder: ''
     public_folder: ''
+    preview_path: blog/{{slug}}
     path: '{{title}}/index'
     editor:
       preview: true
