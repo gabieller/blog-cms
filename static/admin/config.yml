@@ -8,7 +8,6 @@ public_folder: /img
 collections:
   - name: 'blog'
     label: 'Blog'
-    extension: "json"
     folder: 'content/blog'
     create: true
     slug: 'index'
@@ -22,3 +21,21 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'pages'
+    label: 'Pages'
+    extension: "json"
+    format: "json"
+    folder: 'content/pages'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image'}
