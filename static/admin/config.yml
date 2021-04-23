@@ -10,6 +10,8 @@ collections:
     label: 'Blog'
     folder: 'content/blog'
     files: 
+      - label: "Blog Post"
+      - name: "blog"
       - file: content/blog/blog.json
     create: true
     slug: 'index'
