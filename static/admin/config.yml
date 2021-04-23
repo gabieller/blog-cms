@@ -24,18 +24,11 @@ collections:
 
   - name: 'pages'
     label: 'Pages'
-    extension: "json"
-    format: "json"
-    folder: 'content/pages'
-    create: true
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: true
+    files:
+      - label: "Blog Post"
+      - name: "blog_info"
+      - file: content/posts/post.json
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image'}
+        - { label: 'Phone', name: 'phone', widget: 'string' }
+        - { label: 'Email', name: 'email', widget: 'string' }
+        - { label: 'Address', name: 'address', widget: 'string' }
