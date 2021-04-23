@@ -9,6 +9,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
+    file: content/blog/blog.json
     create: true
     slug: 'index'
     media_folder: ''
@@ -23,13 +24,13 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      - label: "Blog Post"
-      - name: "blog_info"
-      - file: content/posts/post.json
-    fields:
-        - { label: 'Phone', name: 'phone', widget: 'string' }
-        - { label: 'Email', name: 'email', widget: 'string' }
-        - { label: 'Address', name: 'address', widget: 'string' }
+  # - name: 'pages'
+  #   label: 'Pages'
+  #   files:
+  #     - label: "Blog Post"
+  #     - name: "blog_info"
+  #     - file: content/posts/post.json
+  #   fields:
+  #       - { label: 'Phone', name: 'phone', widget: 'string' }
+  #       - { label: 'Email', name: 'email', widget: 'string' }
+  #       - { label: 'Address', name: 'address', widget: 'string' }
