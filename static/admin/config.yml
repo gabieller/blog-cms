@@ -17,16 +17,11 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+          
       - label: "Locations Page"
         name: "locations"
         file: "site/content/locations.json"
+        -label: Testing label
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
@@ -36,3 +31,26 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Address, name: address, widget: string}
+
+
+
+
+    #               label: 'Blog'
+    # folder: 'content/blog'
+    # files: 
+    #   - label: "Blog Post"
+    #   - name: "blog"
+    #   - file: content/blog/blog.json
+    # create: true
+    # slug: 'index'
+    # media_folder: ''
+    # public_folder: ''
+    # preview_path: blog/{{slug}}
+    # path: '{{title}}/index'
+    # editor:
+    #   preview: true
+    # fields:
+    #   - { label: 'Title', name: 'title', widget: 'string' }
+    #   - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+    #   - { label: 'Description', name: 'description', widget: 'string' }
+    #   - { label: 'Body', name: 'body', widget: 'markdown' }
