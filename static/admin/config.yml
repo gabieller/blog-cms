@@ -6,23 +6,27 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 
-
 collections:
-  - label: "Events Page"
-    name: "events"
-    folder: "content/events"
-    file: title.json
-    extension: json
-    create: true
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Intro, name: intro, widget: markdown}
-
-
-
-
-
-
+  - name: "tourInfo"
+    label: "Tour Info"
+    description: "Upcoming tours and their availability"
+    files:
+      - label: "Event "
+        name: "event"
+        folder: "content/events/"
+        file: "content/events/tours.json"
+        create: true
+        fields:
+          - label: "Event List"
+            name: "eventList"
+            widget: "list"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Details, name: details, widget: string }
+              - { label: Date, name: date, widget: date }
+              - { label: Place, name: place, widget: string }
+              - { label: Participants, name: participants, widget: string }
+              - { label: Realization, name: realization, widget: string }
 
     #     - label: "Events Page"
     # name: "Events"
@@ -36,8 +40,6 @@ collections:
     #   - {label: Participants, name: participants, widget: string }
     #   - {label: Realization, name: realization, widget: string }
 
-
-
   # - label: "Pages"
   #   name: "pages"
   #   files:
@@ -47,7 +49,7 @@ collections:
   #       fields:
   #         - {label: Title, name: title, widget: string}
   #         - {label: Intro, name: intro, widget: markdown}
-          
+
   #     - label: "Locations Page"
   #       name: locations
   #       file: "site/content/locations.json"
@@ -61,30 +63,22 @@ collections:
   #             - {label: Name, name: name, widget: string}
   #             - {label: Address, name: address, widget: string}
 
-
-
-
-    #               label: 'Blog'
-    # folder: 'content/blog'
-    # files: 
-    #   - label: "Blog Post"
-    #   - name: "blog"
-    #   - file: content/blog/blog.json
-    # create: true
-    # slug: 'index'
-    # media_folder: ''
-    # public_folder: ''
-    # preview_path: blog/{{slug}}
-    # path: '{{title}}/index'
-    # editor:
-    #   preview: true
-    # fields:
-    #   - { label: 'Title', name: 'title', widget: 'string' }
-    #   - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-    #   - { label: 'Description', name: 'description', widget: 'string' }
-    #   - { label: 'Body', name: 'body', widget: 'markdown' }
-
-
-
-
-
+  #               label: 'Blog'
+  # folder: 'content/blog'
+  # files:
+  #   - label: "Blog Post"
+  #   - name: "blog"
+  #   - file: content/blog/blog.json
+  # create: true
+  # slug: 'index'
+  # media_folder: ''
+  # public_folder: ''
+  # preview_path: blog/{{slug}}
+  # path: '{{title}}/index'
+  # editor:
+  #   preview: true
+  # fields:
+  #   - { label: 'Title', name: 'title', widget: 'string' }
+  #   - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  #   - { label: 'Description', name: 'description', widget: 'string' }
+  #   - { label: 'Body', name: 'body', widget: 'markdown' }
