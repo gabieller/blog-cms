@@ -10,15 +10,14 @@ publish_mode: editorial_workflow
 collections:
   - label: "Events Page"
     name: "events"
-    folder: "content/events/"
-    files:
-      - label: "Event Page"
-        name: "event"
-        file: content/events/event.json
-        create: true
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+    folder: "content/events/events.json"
+    create: true
+      # - label: "Event Page"
+        # name: "event"
+    # file: content/events/event.json
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Intro, name: intro, widget: markdown}
 
 
 
