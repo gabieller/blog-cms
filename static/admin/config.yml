@@ -8,12 +8,12 @@ publish_mode: editorial_workflow
 
 
 collections:
-  - name: "tourInfo"
-    label: "Tour Info"
-    description: "Upcoming tours and their availability"
+  - name: "eventInfo"
+    label: "Event Info"
+    description: "Indicium Tech Events CMS"
     files:
       - label: "Event Page"
-        name: "Tour"
+        name: "Events"
         folder: "content/events/" 
         file: "content/events/tours.json"
         create: true
@@ -26,7 +26,10 @@ collections:
               - {label: Details, name: details, widget: string }
               - {label: Date, name: date, widget: date }
               - {label: Place, name: place, widget: string }
-              - {label: Participants, name: participants, widget: list }
+              - {label: Participant 1, name: participants1, widget: string  }
+              - {label: Participant 2, name: participants2, widget: string, required: false }
+              - {label: Participant 3, name: participants3, widget: string,  required: false}
+              - {label: Participant 4, name: participants4, widget: string, required: false }
               - {label: Realization, name: realization, widget: string }
 
 
