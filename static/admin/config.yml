@@ -8,21 +8,17 @@ publish_mode: editorial_workflow
 
 
 collections:
-- label: "Blog"
-  name: "blog"
-  folder: "events/"
-  file: "events/{title}.json"
-  create: true
-  fields:
+  - label: "Events Page"
+    name: "Events"
+    create: true
+    folder: "content/events/"
+    fields:
       - {label: Title, name: title, widget: string }
       - {label: Details, name: details, widget: string }
       - {label: Date, name: date, widget: date }
       - {label: Place, name: place, widget: string }
       - {label: Participants, name: participants, widget: string }
       - {label: Realization, name: realization, widget: string }
-
-
-
 
 
 
