@@ -11,8 +11,8 @@ collections:
   - label: "Events Page"
     name: "events"
     folder: "content/events"
+    file: title.json
     extension: json
-    # file: content/events/.json
     create: true
     fields:
       - {label: Title, name: title, widget: string}
