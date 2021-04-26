@@ -11,10 +11,9 @@ collections:
     - label: "Events"
       name: "events"
       files: 
-        - label: "Events Page"
-          name: "events"
+        - label: Events Page
+          name: events
           file: "site/content/events/events.json"
-          widget: list
           fields:
             - {label: Title, name: title, widget: string }
             - {label: Details, name: details, widget: string }
