@@ -10,17 +10,35 @@ publish_mode: editorial_workflow
 collections:
   - label: "Events Page"
     name: "Events"
-    create: true
-    folder: "content/events/"
-    fields:
-      - {label: Title, name: title, widget: string }
-      - {label: Details, name: details, widget: string }
-      - {label: Date, name: date, widget: date }
-      - {label: Place, name: place, widget: string }
-      - {label: Participants, name: participants, widget: string }
-      - {label: Realization, name: realization, widget: string }
+    # folder: "content/events/"
+    files:
+      - label: "Event Page"
+        name: "title"
+        create: true
+        file: "content/events/{{title}}.json"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
 
 
+
+
+
+
+
+
+
+    #     - label: "Events Page"
+    # name: "Events"
+    # create: true
+    # folder: "content/events/"
+    # fields:
+    #   - {label: Title, name: title, widget: string }
+    #   - {label: Details, name: details, widget: string }
+    #   - {label: Date, name: date, widget: date }
+    #   - {label: Place, name: place, widget: string }
+    #   - {label: Participants, name: participants, widget: string }
+    #   - {label: Realization, name: realization, widget: string }
 
 
 
@@ -71,20 +89,6 @@ collections:
     #   - { label: 'Body', name: 'body', widget: 'markdown' }
 
 
-      #   - label: "Events Page"
-      # name: "events"
-      # folder: "content/events/events.json"
-      # slug: 'index'
-      # path: '{{title}}/index'
-      # files: 
-      #   - label: Event
-      #     name: event
-      #     file: "site/content/events/events.json"
-      #     create: true  
-      #     fields:
-      #       - {label: Title, name: title, widget: string }
-      #       - {label: Details, name: details, widget: string }
-      #       - {label: Date, name: date, widget: date }
-      #       - {label: Place, name: place, widget: string }
-      #       - {label: Participants, name: participants, widget: string }
-      #       - {label: Realization, name: realization, widget: string }
+
+
+
