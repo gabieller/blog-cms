@@ -7,6 +7,32 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+  const events = {
+    eventList: [
+      {
+        date: "2021-04-26T16:25:59.122Z",
+        title: "A Jornada Data Driven na Indústria 4.0",
+        details:
+          "Quer revolucionar seus processos industriais e preparar-se para o futuro da Indústria 4.0 com o poder dos dados? Participe deste evento!  Será um bate-papo imperdível com Giulliano Puga, fundador e diretor de criação da marca Labellamafia, e Matheus Dellagnelo, co-fundador e CEO da Indicium Tech sobre a revolução data driven na Indústria 4.0!  Inscreva-se!",
+        place: "Online",
+        participants1: "Giulliano Puga",
+        participants2: "Matheus Dellagnelo",
+        realization: "Indicium Tech",
+      },
+      {
+        date: "2021-04-26T16:51:19.612Z",
+        title: "Accelerating your data-driven journey",
+        details:
+          "Event covering the  practical challenges and opportunities faced by companies who are developing their data maturity",
+        place: "Online",
+        participants1: "Ricardo Hoerde",
+        participants2: "Hudson Oliveira",
+        participants3: "Matheus Dellagnelo",
+        realization: "Indicium Tech",
+      },
+    ],
+  }
+
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -25,8 +51,8 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
+          const title = events.eventList[1].title || post.fields.slug
+          
           return (
             <li key={post.fields.slug}>
               <article
@@ -40,12 +66,12 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{events.eventList[1].date}</small>
                 </header>
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
+                      __html: events.eventList[1].details || post.excerpt,
                     }}
                     itemProp="description"
                   />
