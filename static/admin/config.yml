@@ -8,21 +8,18 @@ publish_mode: editorial_workflow
 
 
 collections:
-    - label: "Events"
-      name: "events"
-      create: true
-      files: 
-        - label: Events Page
-          name: events
-          file: "site/content/events/events.json"
-          fields:
-            - {label: Title, name: title, widget: string }
-            - {label: Details, name: details, widget: string }
-            - {label: Date, name: date, widget: date }
-            - {label: Place, name: place, widget: string }
-            - {label: Participants, name: participants, widget: string }
-            - {label: Realization, name: realization, widget: string }
-
+- label: "Blog"
+  name: "blog"
+  folder: "events/"
+  file: "events/{title}.json"
+  create: true
+  fields:
+      - {label: Title, name: title, widget: string }
+      - {label: Details, name: details, widget: string }
+      - {label: Date, name: date, widget: date }
+      - {label: Place, name: place, widget: string }
+      - {label: Participants, name: participants, widget: string }
+      - {label: Realization, name: realization, widget: string }
 
 
 
@@ -76,3 +73,22 @@ collections:
     #   - { label: 'Publish Date', name: 'date', widget: 'datetime' }
     #   - { label: 'Description', name: 'description', widget: 'string' }
     #   - { label: 'Body', name: 'body', widget: 'markdown' }
+
+
+      #   - label: "Events Page"
+      # name: "events"
+      # folder: "content/events/events.json"
+      # slug: 'index'
+      # path: '{{title}}/index'
+      # files: 
+      #   - label: Event
+      #     name: event
+      #     file: "site/content/events/events.json"
+      #     create: true  
+      #     fields:
+      #       - {label: Title, name: title, widget: string }
+      #       - {label: Details, name: details, widget: string }
+      #       - {label: Date, name: date, widget: date }
+      #       - {label: Place, name: place, widget: string }
+      #       - {label: Participants, name: participants, widget: string }
+      #       - {label: Realization, name: realization, widget: string }
