@@ -18,6 +18,15 @@
       "participants2": "Hudson Oliveira",
       "participants3": "Matheus Dellagnelo",
       "realization": "Indicium Tech"
+    },
+    {
+      "date": "2021-05-03T21:52:52.841Z",
+      "title": "Another Event",
+      "details": "Testing Event",
+      "place": "Indicium",
+      "participants1": "eu",
+      "participants2": "tu",
+      "realization": "Indicium"
     }
   ]
 }
