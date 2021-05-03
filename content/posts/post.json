@@ -4,6 +4,16 @@
       "image": "/img/pug-p.jpeg",
       "blog-title": "Testing post",
       "blog-description": "blog post"
+    },
+    {
+      "blog-title": "New Post",
+      "image": "/img/cow.jpeg",
+      "blog-description": "vaca sorrindo"
+    },
+    {
+      "blog-title": "New Post Capivara",
+      "blog-description": "test",
+      "image": "/img/v7gbwdbp_400x400.jpg"
     }
   ]
 }
