@@ -1,119 +1,82 @@
+# backend:
+#   name: git-gateway
+#   branch: publish-branch
+
+# media_folder: static/img
+# public_folder: /img
+# publish_mode: editorial_workflow
+
+# collections:
+#   - name: "cms"
+#     label: "Indicium Tech CMS"
+#     description: "Indicium Tech CMS"
+#     files:
+#       - label: "Event Page"
+#         name: "Events"
+#         folder: "content/events/"
+#         file: "content/events/event.json"
+#         create: true
+#         fields:
+#           - label: "Event"
+#             name: "eventList"
+#             widget: "list"
+#             fields:
+#               - { label: "Title", name: "title", widget: "string" }
+#               - { label: Details, name: details, widget: string }
+#               - { label: Date, name: date, widget: date }
+#               - { label: Place, name: place, widget: string }
+#               - { label: Participant 1, name: participants1, widget: string }
+#               - {
+#                   label: Participant 2,
+#                   name: participants2,
+#                   widget: string,
+#                   required: false,
+#                 }
+#               - {
+#                   label: Participant 3,
+#                   name: participants3,
+#                   widget: string,
+#                   required: false,
+#                 }
+#               - {
+#                   label: Participant 4,
+#                   name: participants4,
+#                   widget: string,
+#                   required: false,
+#                 }
+#               - { label: Realization, name: realization, widget: string }
+#       - label: "Blog Page"
+#         name: "Blog"
+#         folder: "content/posts/"
+#         file: "content/posts/post.json"
+#         create: true
+#         fields:
+#           - label: "Blog Post"
+#             name: "blogList"
+#             widget: "list"
+#             fields:
+#               - { label: "title", name: "blog-title", widget: "string" }
+#               - { label: "image", name: "image", widget: "image" }
+#               - { label: Details, name: blog-description, widget: string }
+
+
 backend:
   name: git-gateway
-  branch: publish-branch
-
-media_folder: static/img
-public_folder: /img
-publish_mode: editorial_workflow
-
+  branch: master
+media_folder: public/img
+public_folder: img
 collections:
-  - name: "cms"
-    label: "Indicium Tech CMS"
-    description: "Indicium Tech CMS"
-    files:
-      - label: "Event Page"
-        name: "Events"
-        folder: "content/events/"
-        file: "content/events/event.json"
-        create: true
-        fields:
-          - label: "Event"
-            name: "eventList"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: Details, name: details, widget: string }
-              - { label: Date, name: date, widget: date }
-              - { label: Place, name: place, widget: string }
-              - { label: Participant 1, name: participants1, widget: string }
-              - {
-                  label: Participant 2,
-                  name: participants2,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Participant 3,
-                  name: participants3,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Participant 4,
-                  name: participants4,
-                  widget: string,
-                  required: false,
-                }
-              - { label: Realization, name: realization, widget: string }
-      - label: "Blog Page"
-        name: "Blog"
-        folder: "content/posts/"
-        file: "content/posts/post.json"
-        create: true
-        fields:
-          - label: "Blog Post"
-            name: "blogList"
-            widget: "list"
-            fields:
-              - { label: "title", name: "blog-title", widget: "string" }
-              - { label: "image", name: "image", widget: "image" }
-              - { label: Details, name: blog-description, widget: string }
+  - label: "Blog Posts"
+    name: "posts"
+    folder: "/posts"
+    create: true
+    identifier_field: "title"
+    slug: "{{fields.slug"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "string" }
 
 
 
-
-
-    #     - label: "Events Page"
-    # name: "Events"
-    # create: true
-    # folder: "content/events/"
-    # fields:
-    #   - {label: Title, name: title, widget: string }
-    #   - {label: Details, name: details, widget: string }
-    #   - {label: Date, name: date, widget: date }
-    #   - {label: Place, name: place, widget: string }
-    #   - {label: Participants, name: participants, widget: string }
-    #   - {label: Realization, name: realization, widget: string }
-
-  # - label: "Pages"
-  #   name: "pages"
-  #   files:
-  #     - label: "About Page"
-  #       name: "about"
-  #       file: "site/content/about.json"
-  #       fields:
-  #         - {label: Title, name: title, widget: string}
-  #         - {label: Intro, name: intro, widget: markdown}
-
-  #     - label: "Locations Page"
-  #       name: locations
-  #       file: "site/content/locations.json"
-  #       fields:
-  #         - {label: Title, name: title, widget: string}
-  #         - {label: Intro, name: intro, widget: markdown}
-  #         - label: Locations
-  #           name: locations
-  #           widget: list
-  #           fields:
-  #             - {label: Name, name: name, widget: string}
-  #             - {label: Address, name: address, widget: string}
-
-  #               label: 'Blog'
-  # folder: 'content/blog'
-  # files:
-  #   - label: "Blog Post"
-  #   - name: "blog"
-  #   - file: content/blog/blog.json
-  # create: true
-  # slug: 'index'
-  # media_folder: ''
-  # public_folder: ''
-  # preview_path: blog/{{slug}}
-  # path: '{{title}}/index'
-  # editor:
-  #   preview: true
-  # fields:
-  #   - { label: 'Title', name: 'title', widget: 'string' }
-  #   - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-  #   - { label: 'Description', name: 'description', widget: 'string' }
-  #   - { label: 'Body', name: 'body', widget: 'markdown' }
